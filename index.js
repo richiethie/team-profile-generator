@@ -2,7 +2,7 @@ const inquirer = require('inquirer')
 
 const fs = require('fs')
 
-// const generateHTML = require('./src/generateHTML')
+const generateHTML = require('./src/generateHTML')
 
 const Engineer = require('./lib/Engineer')
 const Intern = require('./lib/Intern')
@@ -80,6 +80,17 @@ const addEmployee = () => {
         }
     })
     // add classes in lib folder for .then to work
+}
+
+const writeFile = (data) => {
+    fs.writeFile('./dist/index.html', data, err => {
+        if (err) {
+            console.log(err)
+            return
+        } else {
+            console.log('You successfully created your team profile! Open the index.html in the browser to view your teams webpage!')
+        }
+    })
 }
 
 addEmployee()
