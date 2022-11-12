@@ -1,8 +1,12 @@
-import inquirer from "inquirer"
+const inquirer = require('inquirer')
 
-import fs from "fs"
+const fs = require('fs')
 
 // const generateHTML = require('./src/generateHTML')
+
+const Engineer = require('./lib/Engineer')
+const Intern = require('./lib/Intern')
+const Manager = require('./lib/Manager')
 
 const team = []
 
@@ -75,6 +79,7 @@ const addEmployee = () => {
             return team
         }
     })
+    // add classes in lib folder for .then to work
 }
 
 addEmployee()
