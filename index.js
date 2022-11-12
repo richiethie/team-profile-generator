@@ -59,7 +59,7 @@ const addEmployee = () => {
         }
     ])
     .then(employeeInfo => {
-        let {position, name, id, email, officeNumber, github, school, addEmployee} = employeeInfo
+        let {position, name, id, email, officeNumber, github, school, addMoreEmployees} = employeeInfo
         let employee;
 
         if (position === 'Manager') {
@@ -94,3 +94,12 @@ const writeFile = (data) => {
 }
 
 addEmployee()
+    .then(team => {
+        return generateHTML(team)
+    })
+    .then(pageHTML => {
+        return writeFile(pageHTML)
+    })
+    .catch(err => {
+        console.log(err)
+    })

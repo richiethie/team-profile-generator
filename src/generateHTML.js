@@ -92,7 +92,7 @@ const generateHTML = (data) => {
         }
     }
 
-    const employeeCards = pageArray.join('')
+    const employeeCards = employeeContainer.join('')
 
     const generatedTeam = generatedHTML(employeeCards)
     return generatedTeam
