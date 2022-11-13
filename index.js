@@ -79,10 +79,10 @@ const addEmployee = () => {
             return team
         }
     })
-    // add classes in lib folder for .then to work
 }
 
-const writeFile = (data) => {
+// not retaining html info to paste on page, terminal working, html not displaying
+const writeFile = data => {
     fs.writeFile('./dist/index.html', data, err => {
         if (err) {
             console.log(err)
@@ -93,7 +93,7 @@ const writeFile = (data) => {
     })
 }
 
-addEmployee()
+addEmployee(team)
     .then(team => {
         return generateHTML(team)
     })
