@@ -11,7 +11,7 @@ const Manager = require('./lib/Manager')
 const team = []
 
 const addEmployee = () => {
-    return inquirer.prompt([
+    inquirer.prompt([
         {
             type: 'list',
             name: 'position',
@@ -76,8 +76,9 @@ const addEmployee = () => {
         team.push(employee)
 
         if (addMoreEmployees) {
-
-            return addEmployee(team)
+            addEmployee(team)
+            writeFile(team)
+            
         } else {
             return
         }
@@ -97,12 +98,3 @@ const writeFile = (team) => {
 }
 
 addEmployee()
-    .then(team => {
-        return generateHTML(team)
-    })
-    .then(team => {
-        return writeFile(team)
-    })
-    .catch(err => {
-        console.log(err)
-    })
