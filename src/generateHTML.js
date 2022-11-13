@@ -70,10 +70,12 @@ const generateManager = (manager) => {
     `
 }
 
-const generateHTML = (data) => {
+const generateHTML = (team) => {
     employeeContainer = []
-    for (let i = 0; i < data.length; i++) {
-        const employee = data[i]
+    console.log(team)
+    //team shows undefined value
+    for (let i = 0; i < team.length; i++) {
+        const employee = team[i]
         const position = employee.getPosition()
 
         if(position === 'Engineer') {

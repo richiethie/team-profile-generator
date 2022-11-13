@@ -73,17 +73,20 @@ const addEmployee = () => {
 
         }
 
+        team.push(employee)
+
         if (addMoreEmployees) {
+
             return addEmployee(team)
         } else {
-            return team
+            return
         }
     })
 }
 
-// not retaining html info to paste on page, terminal working, html not displaying
-const writeFile = data => {
-    fs.writeFile('./dist/index.html', data, err => {
+//team shows undefined value
+const writeFile = (team) => {
+    fs.writeFile('./dist/index.html', generateHTML(team), err => {
         if (err) {
             console.log(err)
             return
@@ -93,12 +96,12 @@ const writeFile = data => {
     })
 }
 
-addEmployee(team)
+addEmployee()
     .then(team => {
         return generateHTML(team)
     })
-    .then(pageHTML => {
-        return writeFile(pageHTML)
+    .then(team => {
+        return writeFile(team)
     })
     .catch(err => {
         console.log(err)
