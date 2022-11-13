@@ -77,10 +77,9 @@ const addEmployee = () => {
 
         if (addMoreEmployees) {
             addEmployee(team)
-            writeFile(team)
             
         } else {
-            return
+            writeFile(team)
         }
     })
 }

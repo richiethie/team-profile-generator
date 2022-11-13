@@ -1,0 +1,33 @@
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    color: white;
+    height: 250px;
+    margin-bottom: 25px;
+}
+
+h1 {
+    display: flex;
+    font-size: 70px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+}
+
+.card-body {
+    border-radius: 5px 5px 0 0 ;
+    background-color: blue;
+    color: white;
+}

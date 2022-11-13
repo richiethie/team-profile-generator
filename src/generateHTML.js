@@ -3,7 +3,6 @@ const generateEngineer = (engineer) => {
     return `
     <div class="col">
         <div class="card" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">${engineer.name}</h5>
                 <p class="card-text">Engineer</p>
@@ -28,7 +27,6 @@ const generateIntern = (intern) => {
     return `
     <div class="col">
         <div class="card" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">${intern.name}</h5>
                 <p class="card-text">Intern</p>
@@ -51,7 +49,6 @@ const generateManager = (manager) => {
     return `
     <div class="col">
         <div class="card" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">${manager.name}</h5>
                 <p class="card-text">Manager</p>
@@ -109,6 +106,7 @@ const generatedHTML = (employeeCards) => {
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+        <link href="./style.css" rel="stylesheet" >
         <title>Team Profile Generator</title>
     </head>
     <body>
@@ -116,7 +114,7 @@ const generatedHTML = (employeeCards) => {
             <h1>My Team</h1>
         </header>
         <main>
-            <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="row row-cols-1 row-cols-md-3 g-4" id="container">
                 ${employeeCards}
             </div>
         </main>
