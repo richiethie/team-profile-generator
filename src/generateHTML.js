@@ -15,7 +15,8 @@ const generateEngineer = (engineer) => {
                 </form>
                 </li>
                 <li class="list-group-item">
-                    <a href="https://github.com/${engineer.github}" class="card-link">GitHub: https://github.com/${engineer.github}</a>
+                    <span>Github: </span>
+                    <a href="https://github.com/${engineer.github}" class="card-link">github.com/${engineer.github}</a>
                 </li>
             </ul>
         </div>

@@ -6,6 +6,9 @@
     "lib": "lib",
     "test": "test"
   },
+  "scripts": {
+    "test": "jest"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/richiethie/team-profile-generator.git"
